@@ -1,0 +1,6 @@
+
+“	java:S117"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(š”Ã÷8â³‡Ì›2J$3f7ed050-0142-4dba-befa-aae00da87b41
+˜	java:S117"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ğÿ¿ùÿÿÿÿ8ã³‡Ì›2J$150e4541-c597-496c-a5c1-91f94b9814e4
+•	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(”Éµ‚J$8f4608dc-7286-4db8-989b-0b18f0d21485
+	java:S116"NRename this field "CPU" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(‘ÚÔ¦8õ×Ë›2J$0ece82e0-ab56-4e43-9882-643a4cfd4abb
+•	java:S116"NRename this field "GPU" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Ü» ¶ûÿÿÿÿ8¥ØØË›2J$27a6c2a2-ff8f-4049-b91c-57d475dc64fa

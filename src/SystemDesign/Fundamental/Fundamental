@@ -1,0 +1,121 @@
+                                                                   _________________________________
+                                      ****************************| KEY CONCEPT OF SYSTEM DESIGNING |********************************
+                                                                   ---------------------------------
+
+Scalability--> is the property of a system to handle a growing amount of load by adding resources to the system.
+
+Availability--> refers to the proportion of time a system is operational and accessible when required.
+
+CAP theorem-->
+
+Consistency, Availability, and Partition Tolerance.
+According to the theorem, a distributed system can only guarantee two out of these three properties at any given time.
+
+important-CP AND AP
+
+ACID-->
+
+Atomicity: All parts of a transaction must succeed, or none of it should happen. It's "all or nothing."
+Example: If you transfer money between bank accounts, either both the debit and credit happen, or neither does.
+
+Consistency: A transaction must move the database from one valid state to another, maintaining all rules (like data types, constraints).
+Example: After a bank transaction, the total amount of money in all accounts remains the same.
+
+Isolation: Transactions should happen independently. One transaction shouldn’t affect another.
+Example: Two people booking movie tickets should not interfere with each other's bookings.
+
+Durability: Once a transaction is completed, its changes are permanent, even if the system crashes.
+Example: After confirming a bank transfer, the transaction remains successful even if the power goes out right after.
+
+
+
+A load balancer is a system or device that distributes incoming network traffic across multiple servers to ensure no single server gets overwhelmed.
+It improves application performance, reliability, and availability by balancing the workload and preventing server overload.
+If one server fails, the load balancer can redirect traffic to other healthy servers, ensuring continued service.
+
+
+
+1. Latency
+
+ it's the time between sending a request and receiving a response.
+ For example, in a video call, latency would be the delay between when you speak and when the other person hears your voice.
+
+2.ThroughPut
+
+ throughput is the number of requests or transactions a system can handle in a given period.
+ It's like measuring how many tasks or data points a system can process per second or minute.
+
+Note-> low latency and high throughput for a good system design
+
+
+Redundancy v/s Replication
+
+Redundancy ensures that the system remains operational even if a component fails.
+For instance, having multiple servers or power supplies ensures that if one fails, others can take over.
+
+Replication ensures that data is available from multiple locations or servers, enhancing access speed and reliability
+Replication strategies (e.g., synchronous or asynchronous) help in managing data consistency across multiple copies.
+This is important when you need to ensure that all copies of data are updated correctly.
+
+
+//Replication: Making extra copies of data to keep it available and consistent across different locations.
+
+//Redundancy: Having backup parts or systems ready to take over if something fails, so everything keeps working smoothly.
+
+
+Can RDBMS scalling horizontally?
+Yes, RDBMS can be horizontally scaled, but it is typically more complex compared to NoSQL databases.
+
+Horizontal scaling in RDBMS is possible through methods like:
+
+ Sharding:Sharding is a method of distributing data across multiple servers to improve performance and scalabilit
+ Replication with Read-Write Splitting:
+ Distributed SQL Databases:
+ Clustering:
+
+Normalisation vs DeNormalisation
+
+Normalization is the process of organizing a database to reduce redundancy and improve data integrity.
+It involves breaking down tables into smaller, related tables and defining relationships between them.
+
+Denormalization is the process of combining tables to reduce the complexity of queries and improve read performance.
+It involves adding redundant data to improve efficiency.
+
+
+Web Server
+
+web server acts as the gateway between the client and the backend infrastructure, routing requests, processing them,
+and sending back the necessary data or content.
+
+Example in a Backend System:
+Client Request: A user logs in on a website.
+Web Server: Receives the login request.
+Backend Server: The web server sends the request to a backend application server (e.g., a Python Flask or Java Spring Boot service).
+Database Interaction: The backend server queries a database to validate the user credentials.
+Response: The web server sends the appropriate response (success or error) back to the user.
+
+
+CAP theorem
+
+Consistency, Availability, and Partition Tolerance.
+According to the theorem, a distributed system can only guarantee two out of these three properties at any given time.
+
+important-CP AND AP
+
+
+
+
+Sharding is a technique used to split large databases into smaller, more manageable pieces, called "shards." Each shard holds a portion of the data, and they can be stored on different servers. This helps improve performance and allows the system to handle more data without slowing down.
+
+Imagine a library that has too many books for one bookshelf. Instead of cramming all the books onto a single shelf, you split them up into several shelves (shards). Now, when someone wants a specific book, they only need to search one shelf instead of going through the entire collection, making the process faster.
+
+Sharding helps distribute data across multiple servers, so even when the database grows, the system remains efficient.
+
+
+
+
+
+
+
+
+
