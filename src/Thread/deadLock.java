@@ -1,5 +1,8 @@
 package Thread;
 
+
+
+
 public class deadLock {
     public static void main(String[] args) {
 

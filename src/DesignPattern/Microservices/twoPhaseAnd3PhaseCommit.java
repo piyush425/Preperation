@@ -59,7 +59,7 @@
  * Each step saves its changes right away and moves to the next step.
  * No locking on the database, so it’s faster and works well in big systems.
  * If something fails, it goes back and undoes previous steps to keep things consistent in the end.
- * 
+ *
  * Two-Phase Commit (2PC):
  *
  * Keeps a lock on data until all parts are ready to save, making sure everything happens together.

@@ -1,0 +1,65 @@
+What is Kafka and how does it work?
+
+Answer: Kafka is a distributed streaming platform used for building real-time data pipelines and streaming applications. It works by organizing messages into topics, which are then divided into partitions. Producers publish messages to topics, and consumers read messages from these topics. Kafka ensures fault tolerance and high throughput by replicating partitions across multiple brokers.
+Explain the architecture of Kafka.
+
+Answer: Kafka's architecture consists of Producers, Consumers, Brokers, Topics, Partitions, and ZooKeeper. Producers send data to topics, which are divided into partitions to allow parallel processing. Consumers read data from these partitions. Brokers manage the storage and retrieval of data. ZooKeeper coordinates and manages the Kafka cluster.
+What is a Kafka partition and what role does it play?
+
+Answer: So, a partition is basically a division of topics that allows consumers to read messages in parallel, enabling parallelism. Messages in a partition are stored in an ordered and immutable way. Each message in a partition has a unique offset, which ensures the order is maintained. Partitions help achieve parallelism by distributing load across multiple consumers, and this allows Kafka to scale efficiently and handle higher data volumes.
+
+How does Kafka ensure data durability and reliability?
+
+Answer: Kafka ensures data durability and reliability through replication. Each partition is replicated across multiple brokers, ensuring that even if one broker fails, the data can still be accessed from other replicas. Additionally, Kafka uses logs to persist data on disk.
+
+Explain the concept of offsets in Kafka.
+
+Answer: So, an offset is a unique identifier for each message within a partition. It’s a unique numerical value that helps consumers track which message was last processed and where to read the next message from. Offsets are sequential and increase with each new message, allowing consumers to pick up exactly where they left off, ensuring no duplicate processing or missing messages.
+
+What is a Kafka consumer group?
+
+Answer: So, a Kafka consumer group is a collection of consumers that work together to read messages from a set of partitions in a topic. Each consumer in the group is assigned to different partitions to achieve parallelism, ensuring that each message in a partition is read by only one consumer within the group. This setup allows for scalable and fault-tolerant message consumption. If a consumer in the group fails, Kafka automatically reassigns its partitions to the remaining consumers, ensuring continuous processing without missing messages.
+
+How do you achieve exactly-once semantics in Kafka?
+
+Answer: Exactly-once semantics in Kafka can be achieved using idempotent producers and transactional APIs. Idempotent producers ensure that messages are not duplicated when retried, and transactional APIs allow producers and consumers to commit messages in a single atomic operation, ensuring that messages are neither lost nor duplicated.
+What are the different types of Kafka retention policies?
+
+Answer: Kafka supports two main types of retention policies: time-based retention and size-based retention. Time-based retention deletes messages that are older than a specified time period, while size-based retention deletes messages when the total size of the log exceeds a specified limit.
+ZooKeeper
+What is ZooKeeper and how does it work in a Kafka cluster?
+
+Answer: ZooKeeper is a distributed coordination service that Kafka uses to manage and coordinate the Kafka brokers. It keeps track of broker metadata, configurations, and leader elections. ZooKeeper ensures that all brokers in the Kafka cluster are aware of each other and maintain a consistent state.
+Why does Kafka need ZooKeeper?
+
+Answer: Kafka relies on ZooKeeper for managing and coordinating the Kafka cluster. ZooKeeper handles broker metadata, leader election for partitions, and ensures high availability and fault tolerance by maintaining the cluster state and configurations.
+What are ZooKeeper znodes and how are they used in Kafka?
+
+Answer: Znodes are the data nodes in ZooKeeper's hierarchical namespace. Kafka uses znodes to store metadata such as broker information, topic configurations, and partition leader details. Znodes can be ephemeral (temporary and disappear when the session ends) or persistent (remain until explicitly deleted).
+Explain the concept of leader election in ZooKeeper.
+
+Answer: Leader election in ZooKeeper is the process of selecting a leader among a group of nodes (brokers) to coordinate a particular task. In Kafka, leader election is used to select a broker as the leader for each partition. The leader broker is responsible for all read and write requests for the partition.
+What happens if ZooKeeper goes down in a Kafka cluster?
+
+Answer: If ZooKeeper goes down, the Kafka cluster can continue to operate temporarily, but new leader elections, topic creation, and configuration changes will not be possible. If ZooKeeper remains down for an extended period, it can lead to inconsistencies and operational issues in the Kafka cluster.
+How does ZooKeeper ensure consistency in a distributed system?
+
+Answer: ZooKeeper ensures consistency through a consensus algorithm called Zab (ZooKeeper Atomic Broadcast). Zab guarantees that updates are applied in the same order across all ZooKeeper nodes, ensuring a consistent state across the distributed system.
+General
+How do you monitor Kafka and ZooKeeper?
+
+Answer: Kafka and ZooKeeper can be monitored using various tools such as Prometheus, Grafana, and Kafka's built-in JMX metrics. Monitoring includes tracking metrics like broker health, topic partition status, consumer lag, ZooKeeper session state, and request latencies to ensure the systems are running smoothly.
+Describe the process of setting up a Kafka cluster.
+
+Answer: Setting up a Kafka cluster involves several steps:
+Install Kafka and ZooKeeper on each broker node.
+Configure ZooKeeper with proper settings and start the ZooKeeper ensemble.
+Configure Kafka brokers with appropriate settings, including ZooKeeper connection details, broker IDs, and log directories.
+Start the Kafka brokers and verify that they successfully connect to ZooKeeper.
+Create topics and set up producers and consumers to start streaming data.
+How do you handle Kafka security?
+
+Answer: Kafka security can be handled through encryption (SSL/TLS), authentication (SASL), and authorization (ACLs). SSL/TLS secures data in transit, SASL provides authentication mechanisms like Kerberos, and ACLs control access to Kafka resources based on user roles and permissions.
+What is the role of a Kafka broker?
+
+Answer: A Kafka broker is a server that hosts Kafka topics and partitions. Brokers receive data from producers, store it on disk, and serve it to consumers. Brokers also manage replication of partitions to ensure data durability and fault tolerance.

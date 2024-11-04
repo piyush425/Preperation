@@ -15,14 +15,17 @@ important-CP AND AP
 
 ACID-->
 
-1. Atomicity --> Atomicity ensures that a transaction is treated as an indivisible unit of work.
-It means that either all the operations within a transaction are successfully completed, or none of them are applied to the database.
-If any part of the transaction fails, the entire transaction is rolled back, and the database is restored to its previous consistent state.
+Atomicity: All parts of a transaction must succeed, or none of it should happen. It's "all or nothing."
+Example: If you transfer money between bank accounts, either both the debit and credit happen, or neither does.
 
-2. Consistency--> The database must be in a valid state before and after the transaction.
-                  A transaction should take the database from one valid state to another, maintaining integrity constraints.
-3. Isolation--> Transactions are executed independently, even if they occur concurrently.
-4. Durability--> Once a transaction is committed, the changes are permanent, even in the case of a system failure.
+Consistency: A transaction must move the database from one valid state to another, maintaining all rules (like data types, constraints).
+Example: After a bank transaction, the total amount of money in all accounts remains the same.
+
+Isolation: Transactions should happen independently. One transaction shouldn’t affect another.
+Example: Two people booking movie tickets should not interfere with each other's bookings.
+
+Durability: Once a transaction is completed, its changes are permanent, even if the system crashes.
+Example: After confirming a bank transfer, the transaction remains successful even if the power goes out right after.
 
 
 

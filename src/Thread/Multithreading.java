@@ -77,6 +77,38 @@ public class Multithreading {
      * After a thread has completed its execution, it reaches this state and is no longer active.
      */
 
+    /**
+     * join()
+     *
+     *The join() method in Java is used to make the main thread (or any calling thread) wait until the specified thread
+     *  (the one you call join() on) has finished executing.
+     *  So, if you have a thread t1, and in the main thread you call t1.join(), the main thread will pause and wait until t1 completes
+     */
+
+    //  Process, Thread, Codesegment
+
+    /**
+     * Process: A program in execution, with its own memory space. It manages tasks and resources in the system.
+     *
+     * Thread: A lightweight unit of a process, sharing the process's memory but having its own execution path.
+     *         Threads within the same process run tasks independently but can communicate easily.
+     *
+     * Heap: A memory area where dynamic (runtime) allocations happen, like objects and variables that need to persist for the program's duration.
+     *       Unlike the stack, the heap is shared among all threads in a process, allowing for flexible memory use but requiring careful management to avoid memory leaks.
+     *
+     * Code Segment: Part of a program that holds the actual code (instructions) to be executed. It's shared among all threads in the same process.
+     *
+     * Data Segment: Contains global and static variables used by the program. This part is shared among all threads within a process.
+     *
+     * Register: Small, fast storage inside the CPU that holds data and instructions temporarily during processing.
+     *           Used to store temporary data that the CPU is currently processing, such as intermediate calculation results, instruction addresses, and variables.
+     *
+     * Counter: Specifically, the Program Counter (PC), which keeps track of the next instruction to execute in a program.
+     *
+     * Thread Stack: Each thread has its own stack that stores local variables, function calls, and return addresses for its tasks.
+     *               The stack helps track the execution flow within the thread.
+     */
+
 
 
 
