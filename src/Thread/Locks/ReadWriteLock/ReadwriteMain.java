@@ -16,11 +16,11 @@ public class ReadwriteMain {
         ReadWriteLock readWriteLock=new ReentrantReadWriteLock();
 
         Thread t1=new Thread(()->{
-            sharedReadWrite.consume(readWriteLock);
+            sharedReadWrite.produce(readWriteLock);
         });
 
         Thread t2=new Thread(()->{
-            sharedReadWrite.consume(readWriteLock);
+            sharedReadWrite.produce(readWriteLock);
         });
 
 //        SharedReadWrite sharedReadWrite1=new SharedReadWrite();

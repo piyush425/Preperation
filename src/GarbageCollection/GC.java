@@ -37,6 +37,7 @@
  * Java splits memory into Young Generation (new objects), Old Generation (long-lived objects), and Permanent Generation/Metaspace (class metadata).
  * Most GC work happens in the Young Generation, as new objects are more likely to be short-lived, making GC faster and reducing pauses.
  */
+
 //What is the difference between Minor GC and Major GC?
 /**
  * Minor GC
@@ -53,6 +54,7 @@
  * Removes unreferenced objects: It deletes (sweeps away) any objects that are not referenced anymore.
  * Optional compaction: Depending on the collector, it may compact memory to reduce fragmentation in the Old Generation.
  * Result: Major GC is thorough and less frequent but causes longer pauses because it processes the entire heap, which impacts performance.
+ *
  */
 
 //compaction

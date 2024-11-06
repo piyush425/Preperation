@@ -9,12 +9,17 @@ public class Collection {
         emp.add(new Emp("Piyush","Software",3));
         emp.add(new Emp("Aahul","BA",2));
 
-        emp.sort(Comparator.comparing(Emp::getName));//new way
+        Collections.sort(emp);
+
+
+
+
+//        emp.sort(Comparator.comparing(Emp::getName));//new way
 
 //       Collections.sort(emp,new NameBasedSort());
 
-
-        Comparator.comparing(Emp::getEmpId);
+//
+//        Comparator.comparing(Emp::getEmpId);
 
         for (Emp e: emp){
             System.out.println(e);

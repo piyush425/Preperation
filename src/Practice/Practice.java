@@ -1,18 +1,42 @@
 package Practice;
 
-import java.util.Arrays;
-import java.util.List;
-import java.util.Map;
-import java.util.stream.Collectors;
-
 public class Practice {
     public static void main(String[] args) {
-        List<Integer> list= Arrays.asList(1,2,2,3,2,3,2,1);
+        final Object resource1="resource1";
+        final Object resource2="resource2";
 
-//        Map<Integer,Integer> map=list.stream().collect(e-> Collectors.counting());
-//
-//        System.out.println(map);
+        Thread t1=new Thread(()->{
 
-        System.out.println("piyush");
+            synchronized (resource1){
+                System.out.println("resource1");
+                try {
+                    Thread.sleep(1000);
+                    synchronized (resource2){
+                        System.out.println("resource2");
+                    }
+                } catch (InterruptedException e) {
+                    throw new RuntimeException(e);
+                }
+            }
+
+        });
+        Thread t2=new Thread(()->{
+
+            synchronized (resource2){
+                System.out.println("resource2");
+                try {
+                    Thread.sleep(1000);
+                    synchronized (resource1){
+                        System.out.println("resource2");
+                    }
+                } catch (InterruptedException e) {
+                    throw new RuntimeException(e);
+                }
+            }
+
+        });
+
+        t1.start();
+        t2.start();
     }
 }
