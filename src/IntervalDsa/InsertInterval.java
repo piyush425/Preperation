@@ -29,7 +29,6 @@ public class InsertInterval {
             else{
                 newArr[0]=Math.min(arr[i][0],newArr[0]);
                 newArr[1]=Math.max(arr[i][1],newArr[1]);
-
             }
         }
         list.add(newArr);

@@ -29,7 +29,13 @@ public class Tree {
         preOrder(root.right);
 
     }
-
+    /**
+     *      1
+     *      / \
+     *     2   3
+     *    / \   \
+     *   4   5   6
+     */
     public static void  inOrder(Node root){
 
         if (root==null){
@@ -40,6 +46,13 @@ public class Tree {
         inOrder(root.right);
 
     }
+    /**
+     *      1
+     *      / \
+     *     2   3
+     *    / \   \
+     *   4   5   6
+     */
     public static void  postOrder(Node root){
 
         if (root==null){
@@ -98,6 +111,14 @@ public class Tree {
 
         return Math.max(diam3,Math.max(diam1,diam2));
     }
+
+    /**
+     *      1
+     *      / \
+     *     2   3
+     *    / \   \
+     *   4   5   6
+     */
 
 
     public static void levelOrder(Node root){

@@ -6,11 +6,17 @@ public class Option {
 
     public static void main(String[] args) {
 
-        Optional<String> name=getName();
+        int num=9;
 
-        name.ifPresent(x->System.out.println(name.get().toUpperCase()));
+        num=10;
 
-        System.out.println(name.map(String::toUpperCase).orElse("No record found"));
+        System.out.println(num);
+
+//        Optional<String> name=getName();
+//
+//        name.ifPresent(x->System.out.println(name.get().toUpperCase()));
+//
+//        System.out.println(name.map(String::toUpperCase).orElse("No record found"));
 
 
 

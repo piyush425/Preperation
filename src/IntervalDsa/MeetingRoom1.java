@@ -12,7 +12,7 @@ public class MeetingRoom1 {
          * Answer=false
          */
 
-         int[][] arr={{1,4},{5,10},{15,20}};
+         int[][] arr={{1,10},{5,10},{15,20}};
 
 
          boolean res=true;

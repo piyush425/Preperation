@@ -30,7 +30,6 @@ public class minimalPlatorm {
             if(max<count){
                 max=count;
             }
-
         }
 
         return max;

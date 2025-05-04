@@ -23,14 +23,14 @@ public class ReadwriteMain {
             sharedReadWrite.produce(readWriteLock);
         });
 
-//        SharedReadWrite sharedReadWrite1=new SharedReadWrite();
-//        Thread t3=new Thread(()->{
-//            sharedReadWrite1.consume(readWriteLock);
-//        });
+        SharedReadWrite sharedReadWrite1=new SharedReadWrite();
+        Thread t3=new Thread(()->{
+            sharedReadWrite1.consume(readWriteLock);
+        });
 
         t1.start();
         t2.start();
-//        t3.start();
+        t3.start();
 
     }
 }

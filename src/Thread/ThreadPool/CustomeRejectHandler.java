@@ -3,7 +3,7 @@ package Thread.ThreadPool;
 import java.util.concurrent.RejectedExecutionHandler;
 import java.util.concurrent.ThreadPoolExecutor;
 
-public class CustomeRejectHandler implements RejectedExecutionHandler {
+public class  CustomeRejectHandler implements RejectedExecutionHandler {
 
     @Override
     public void rejectedExecution(Runnable r, ThreadPoolExecutor executor) {

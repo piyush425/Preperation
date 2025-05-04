@@ -22,6 +22,4 @@ public class SharedResources {
             System.out.println("Lock Released by:  "+Thread.currentThread().getName());
         }
     }
-
-
 }

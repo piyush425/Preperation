@@ -17,7 +17,6 @@ public class NonOverLapping {
 
         Arrays.sort(arr,(a,b)->a[1]-b[1]);
 
-
         int[] newArray=arr[0];
         int count=0;
 

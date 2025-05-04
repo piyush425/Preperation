@@ -10,7 +10,7 @@ public class sort {
 //                map.put("Badal",33);
 //                map.put("Chotu",28);
 //
-//                Map<Integer,String> reverseMap=new HashMap<>();
+//        Map<Integer,String> reverseMap=new HashMap<>();
 //        TreeMap<String,Integer> tre=new TreeMap<>(map);
 //
 //        for (Map.Entry<String,Integer> itr:tre.entrySet()){

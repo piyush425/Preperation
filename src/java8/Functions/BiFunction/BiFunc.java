@@ -14,6 +14,5 @@ public class BiFunc {
         BinaryOperator<Integer> binary=(a,b)->a+b;
         System.out.println(binary.apply(4,4));
 
-
     }
 }

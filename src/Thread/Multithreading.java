@@ -4,8 +4,8 @@ public class Multithreading {
     /**
      * Multithreading is a programming technique that allows multiple threads (smaller units of a process) to run concurrently within a single program.
      * improving performance by using system resources efficiently
-     * Each thread operates independently but shares the same memory space, allowing for faster execution and better responsiveness in applications
-     *
+//     * Each thread operates independently but shares the same memory space, allowing for faster execution and better responsiveness in applications
+//     *
      * In multithreading, shared resources are things like variables, objects, files, or databases that multiple threads can access at the same time.
      */
 
@@ -13,7 +13,7 @@ public class Multithreading {
      *  //modern concurrency mechanisms
      *
      *  Future (from Java 5)
-     *  CompletableFuture (from Java 8)
+     *  completableFuture (from Java 8)C
      *  ExecutorService (Thread Pool)
      *  Parallel Streams (from Java 8)
      *  Fork/Join Framework (from Java 7)

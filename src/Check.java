@@ -1,27 +1,64 @@
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
-import java.util.ArrayList;
-import java.util.Date;
-import java.util.List;
+import java.util.*;
 
 public class Check {
+    static final int MOD = 1_000_000_007;
 
     public static void main(String[] args) throws ParseException {
+//
+//        Date currentDate = new Date();
+//
+//        System.out.println(currentDate.toString());
+//
+//
+//
+//        SimpleDateFormat formatter = new SimpleDateFormat("dd/MM/yyyy");
+//
+//
+//        String dateString = formatter.format("2024-09-14 15:46:35.507");
+//
+//
+//        System.out.println(dateString);
 
-        Date currentDate = new Date();
+        String word = "abcd";
+        System.out.println(countGoodSubsequences(word));
 
-        System.out.println(currentDate.toString());
+    }
 
+    public static int countGoodSubsequences(String word) {
+        // Count frequency of each character
+        Map<Character, Integer> freqMap = new HashMap<>();
+        for (char c : word.toCharArray()) {
+            freqMap.put(c, freqMap.getOrDefault(c, 0) + 1);
+        }
 
+        // Count occurrences of each frequency
+        Map<Integer, Integer> countFreq = new HashMap<>();
+        for (int freq : freqMap.values()) {
+            countFreq.put(freq, countFreq.getOrDefault(freq, 0) + 1);
+        }
 
-        SimpleDateFormat formatter = new SimpleDateFormat("dd/MM/yyyy");
+        long result = 0;
+        for (Map.Entry<Integer, Integer> entry : countFreq.entrySet()) {
+            int freq = entry.getKey();
+            int count = entry.getValue();
+            result = (result + power(2, count) - 1 + MOD) % MOD;
+        }
 
+        return (int) result;
+    }
 
-        String dateString = formatter.format("2024-09-14 15:46:35.507");
-
-
-        System.out.println(dateString);
-
+    private static long power(long base, int exp) {
+        long result = 1;
+        while (exp > 0) {
+            if ((exp & 1) == 1) {
+                result = (result * base) % MOD;
+            }
+            base = (base * base) % MOD;
+            exp >>= 1;
+        }
+        return result;
     }
 
 

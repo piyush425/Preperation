@@ -1,7 +1,7 @@
 // CAS
 
 /**
- * Compare-And-Swap (CAS) is a technique used in multithreading to safely update a value without using locks.
+ * Cut using locks.
  *
  * Here’s how CAS (Compare-And-Swap) makes this process safe:
  *

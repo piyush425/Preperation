@@ -1,5 +1,7 @@
+
 //What is Garbage Collection in Java, and why is it necessary?
 //Explain how memory management works in Java.
+
 /**
  *  Garbage Collection (GC) is Java's automatic process to remove unused objects from memory,
  *  freeing space and preventing memory leaks.
@@ -9,6 +11,7 @@
  */
 
 //What types of memory areas are managed by the JVM?
+
 /**
  *  JVM manages Heap (where objects are stored)
  *  Stack (for method calls and local variables)
@@ -17,8 +20,9 @@
  */
 
 //Describe the different Garbage Collection algorithms available in Java
+
 /**
- * Mark-Sweep:
+ * Mark-Sweep:1
  * How it works: Marks all live (reachable) objects, then sweeps away any unused objects.
  * Pros and Cons: Simple and effective but can leave gaps in memory (fragmentation), which slows down future allocations.
  *
@@ -29,8 +33,9 @@
  * Copying:
  *
  *
- * Generational GC:
+ *
  */
+
 //How does the Generational Garbage Collection model work in Java?
 
 /**
@@ -39,7 +44,8 @@
  */
 
 //What is the difference between Minor GC and Major GC?
-/**
+
+/**12c
  * Minor GC
  * Targets the Young Generation: Minor GC focuses only on the Young Generation, where most objects are short-lived.
  * Process:
@@ -58,6 +64,7 @@
  */
 
 //compaction
+
 /**
  * Compaction means rearranging memory to place all live (in-use) objects together, clearing out gaps left by deleted ones. This prevents fragmentation—scattered empty spaces—so memory can be used more efficiently.
  *
@@ -73,7 +80,7 @@
  * CMS GC: Works concurrently, allowing the application to run while GC works in the background, though it doesn’t fully eliminate pauses and doesn’t perform compaction.
  * G1 GC: Solves CMS’s lack of compaction by dividing the heap into regions and compacting them as needed.
  *
- * ZGC (Z Garbage Collector)
+ * ZGC (Z Garbage Collector) m
  * Purpose: Designed for ultra-low latency (pause times under 10ms) regardless of heap size, making it ideal for high-performance applications.
  * How it works: Uses advanced techniques like colored pointers and loads most of its work concurrently, which minimizes interruptions.
  * Difference: Unlike CMS or G1, ZGC manages very large heaps with almost no pause time, making it stand out in performance for massive applications.
@@ -86,6 +93,7 @@
  */
 
 //What are Eden Space, Survivor Space, and Tenured Space?
+
 /**
  * Eden Space: Part of the Young Generation. New objects are created here.
  * Survivor Spaces: Also part of the Young Generation, there are usually two survivor spaces (S0 and S1). When objects survive a few Minor GCs, they are moved here.
@@ -101,6 +109,8 @@
  * Garbage Collection: Objects with strong references are never collected by GC as long as they’re reachable.
  * Example: String name = new String("John");
  * Soft Reference
+ *`
+ *
  *
  * What it is: Holds an object that should only be collected if memory is low.
  * Garbage Collection: GC clears these only when the JVM is low on memory, helping avoid memory issues.
@@ -121,11 +131,13 @@
  */
 
 //7. What causes an OutOfMemoryError?
+
 /**
  * This error happens when the JVM runs out of heap space and cannot allocate memory for new objects. Common causes: memory leaks or large, unexpected loads.
  */
 
 //How would you tune GC?
+
 /**Tune GC with JVM flags like -Xms, -Xmx for heap size and choose a suitable collector (-XX:+UseG1GC, -XX:+UseConcMarkSweepGC)
  * based on your app’s needs (e.g., low-latency vs. high throughput).
  *
@@ -137,6 +149,7 @@
  */
 
 //How would you detect a memory leak?
+
 /**
  *Use tools like VisualVM or heap dumps. Look for growing memory usage or objects that remain in memory longer than expected
  */

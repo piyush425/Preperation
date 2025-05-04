@@ -33,12 +33,12 @@ public class SharedStampedResources {
 
         try {
             System.out.println("performing work");
-//            a=9;
         }
         finally {
             stampedLock.unlock(stamp);
             System.out.println("Write Lock Released by  :"+Thread.currentThread().getName());
         }
     }
+
 
 }

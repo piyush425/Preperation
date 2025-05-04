@@ -2,7 +2,7 @@ package Thread.ThreadPool;
 
 /**
  * What
- *
+
  * A thread pool is a collection of pre-initialized threads that are maintained to perform tasks.
  * Instead of creating and destroying threads for every task, a thread pool allows for reusing existing threads,
  * which improves the efficiency and performance of multi-threaded applications.

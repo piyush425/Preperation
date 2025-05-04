@@ -3,12 +3,7 @@ package IntervalDsa;
 public class MeetingRom {
     int[][] nums = {{1, 10}, {8, 8}, {10, 12}, {13, 18}};
 
-
 }
-
-
-
-
 
     //with priorityqueue
 

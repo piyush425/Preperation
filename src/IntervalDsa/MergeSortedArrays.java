@@ -13,6 +13,9 @@ public class MergeSortedArrays {
          *
          * arr2={[2,3], [4,8], [11,15]};
          *
+         *
+         *
+         *
          * result={[1,3], [4, 10], [11, 15], [16, 17]}
          */
 
@@ -22,7 +25,6 @@ public class MergeSortedArrays {
         int[] current=null;
         int i=0;
         int j=0;
-
         Arrays.sort(arr1,(a,b)->a[0]-b[0]);
         Arrays.sort(arr2,(a,b)->a[0]-b[0]);
 
@@ -33,7 +35,6 @@ public class MergeSortedArrays {
             int[] intervals2=j<arr2.length?arr2[j]:new int[]{Integer.MAX_VALUE,Integer.MAX_VALUE};
             
             if(intervals1[0]<=intervals2[0]){
-                
                 if(current==null){
                     current=intervals1;
                 } else if (current[1]>=intervals1[0]) {
@@ -43,9 +44,7 @@ public class MergeSortedArrays {
                     list.add(current);
                     current=intervals1;
                 }
-
                 i++;
-
             }
             else{
 
@@ -59,7 +58,6 @@ public class MergeSortedArrays {
                     current=intervals2;
                 }
                 j++;
-
             }
         }
 

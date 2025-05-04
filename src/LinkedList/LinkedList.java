@@ -1,5 +1,7 @@
 package LinkedList;
 
+
+
 public class LinkedList {
 
     //Deleteing a node ddl
@@ -52,6 +54,10 @@ public class LinkedList {
 
 //    }
 
+
+
+
+
     //reverse with sll
 //    class Solution {
 //        public ListNode reverseList(ListNode head) {
@@ -73,25 +79,26 @@ public class LinkedList {
 //        }
 //    }
 
+
     //insert node
-//    void addNode(Node head_ref, int pos, int data)
-//    {
-//        // Your code here
-//        int current=0;
-//        Node curr=head_ref;
-//
-//
-//        for(int i=0;i<pos;i++){
-//            curr=curr.next;
-//        }
-//        Node newData=new Node(data);
-//        newData.prev=curr;
-//
-//        Node temp=curr.next;
-//        curr.next=newData;
-//        curr=curr.next;
-//        curr.next=temp;
-//
+    void addNode(Node head_ref, int pos, int data) {
+        Node curr = head_ref;
+
+        for (int i = 0; i < pos; i++) {
+
+            curr = curr.next;
+        }
+
+        Node newData = new Node(data);
+        newData.prev = curr;
+        newData.next = curr.next;
+
+        if (curr.next != null) {
+            curr.next.prev = newData;
+        }
+
+        curr.next = newData;
+    }
 
 
 //    class Solution {

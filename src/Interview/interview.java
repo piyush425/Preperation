@@ -1,17 +1,33 @@
-// ------------------------------what is benefit of spring boot
+//Microserbices
+/**
+ * Microservices is an architectural style where an application is built as a collection of small,
+ * independent services that communicate via APIs. Each service focuses on a specific business capability,
+ * runs independently, and can be developed, deployed, and scaled separately.
+ */
+
+
+
+// ------------------------------what is benefit of spring boot---------------------------------------------
+
+
+
+
 
 /**
  * it reduces development time and effort by handling configurations and dependencies for you.
+ *
  *
  * it simplifies the configuration and setup process, allowing developers to force more on writing code for their application
  * e.g->Auto-Configuration (dependecies)
  * Starter Dependencies:
  * Microservices Ready
  * Embedded Servers: No need for external servers (Tomcat, Jetty) – just run the app.
+ *
  */
 
 
 //spring vs spring boot
+
 /**
  * Configuration: Spring requires a lot of manual configuration, while Spring Boot comes with auto-configuration and default settings.
  * Project Setup: Spring Boot projects can be set up and launched quickly with minimal setup, while Spring projects involve more complexity.
@@ -37,12 +53,15 @@
  */
 
 //---------------------------------------------Hasset vs Treeset
+
 /**
+ *
  * Use HashSet when you want fast performance and don’t care about the order. O(1)
  * Use TreeSet when you need elements in a sorted order. O(logn)
  *
  * /Create a TreeSet with a custom comparator for descending order
  *  reeSet<Integer> treeSet = new TreeSet<>(Comparator.reverseOrder());
+ *
  */
 
 //LinkedList
@@ -77,7 +96,8 @@
  * HAVING: Filters grouped rows after GROUP BY.
  */
 
-/**The GROUP BY clause is used to group rows that have the same values in specified columns into summary rows. It's commonly used with aggregate functions like COUNT(), SUM(), AVG(), MIN(), and MAX() to summarize data.**/
+/**T
+ * he GROUP BY clause is used to group rows that have the same values in specified columns into summary rows. It's commonly used with aggregate functions like COUNT(), SUM(), AVG(), MIN(), and MAX() to summarize data.**/
 
  //To handle separate transactions concurrently without interference:
 

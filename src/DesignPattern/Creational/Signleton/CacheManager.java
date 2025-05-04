@@ -15,10 +15,11 @@ public class CacheManager {
 
     public static CacheManager getInstance() {
 
-        if (instance == null) {
+//        if (instance == null) {
             instance = new CacheManager();
-        }
-        return instance;
+            return instance;
+//        }
+//        return instance;
 
     }
 

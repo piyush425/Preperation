@@ -24,6 +24,7 @@ public class deadLock {
             }
 
         });
+
         Thread t2=new Thread(()->{
 
             synchronized (resurce2){
