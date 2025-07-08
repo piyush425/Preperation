@@ -24,5 +24,4 @@ public class JumpProblem {
             return jump;
 
         }
-
 }
