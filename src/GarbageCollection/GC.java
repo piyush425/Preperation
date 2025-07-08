@@ -111,7 +111,6 @@
  * Soft Reference
  *`
  *
- *
  * What it is: Holds an object that should only be collected if memory is low.
  * Garbage Collection: GC clears these only when the JVM is low on memory, helping avoid memory issues.
  * Use Case: Caches.

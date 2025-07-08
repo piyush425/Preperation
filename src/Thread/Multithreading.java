@@ -42,6 +42,7 @@ public class Multithreading {
      * 3. Running (Thread Currently Executing)
      *
      * When you create a thread and call start(), the thread enters the Runnable state.
+     * \
      * It remains Runnable until the JVM and OS thread scheduler allocate CPU time to it, at which point the thread is in the Running state.
      * As soon as the thread gets time on the CPU and starts executing its run() method, it's considered Running.
      *

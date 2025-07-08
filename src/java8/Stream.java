@@ -13,7 +13,7 @@ import java.util.stream.*;
  * Stream API is used for processing collections in a functional way (without loops).
  * It makes operations like filtering, mapping, and sorting easier.
  *
- * A Parallel Stream processes elements concurrently using multiple threads, making it faster for large datasets.
+ * A Parallel Stream processes elements concurrently using multi ple threads, making it faster for large datasets.
  * List<Integer> numbers = List.of(1, 2, 3, 4, 5, 6);
  *
  *         int sum = numbers.parallelStream()

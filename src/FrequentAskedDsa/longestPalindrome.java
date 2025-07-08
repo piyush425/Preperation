@@ -1,6 +1,10 @@
+package FrequentAskedDsa;
+
 public class longestPalindrome {
     public static void main(String[] args) {
-        String str="ababa";
+        String str="ABCBAMNMXYZ";
+
+        System.out.println(str.substring(1,2));
 
         int start=0;
         int end=0;

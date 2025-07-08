@@ -1,3 +1,5 @@
+package FrequentAskedDsa;
+
 import java.util.*;
 
 class groupOfAnagram {
